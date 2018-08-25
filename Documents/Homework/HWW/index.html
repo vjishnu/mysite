@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>HomeWork | Home</title>
+
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+
+<body>
+
+
+    <div class="landing">
+
+        <h1>homework</h1>
+        <p>Bulid your dream home</p>
+
+        <form action="#">
+
+            <select name="category" onChange="getSelectValue();">
+            <option value="cat" selected disabled hidden>Choose category</option>     
+         <?php while($row1=mysqli_fetch_array($result2)):;?>
+         <option value="<?php echo $row1[7];?>"><?php echo $row1[8];?></option>
+         <?php endwhile;?></select>
+
+
+            <script>
+                function getSelectValue() {
+                    var selectivevalue = document.getElementById("list");
+                    console.log(selectedvalue);
+                }
+
+            </script>
+
+
+
+            <select name="location" id="location" onChange="getSelectValue();">
+            <option value="loc" selected disabled hidden>Choose Location</option>     
+         <?php while($row1=mysqli_fetch_array($result1)):;?>
+         <option value="<?php echo $row1[4];?>"><?php echo $row1[5];?></option>
+         <?php endwhile;?>
+         </select>
+
+            <script>
+                function getSelectValue() {
+                    var selectivevalue = document.getElementById("location");
+                    console.log(selectedvalue);
+                }
+
+            </script>
+
+            <button name="search"><i class="fa fa-search" aria-hidden="true"></i></button>
+
+        </form>
+
+    </div>
+
+    <header>
+        <a href="index.php" id="page_name"><img src="images/smpl.png" alt=""></a>
+        <nav>
+
+            <ul>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="#topsec">Top Searches</a></li>
+                <li><a href="#contactus">Contact Us</a></li>
+                <li><a href="login.html">Login | Sign Up</a></li>
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <section class="tops" id="topsec">
+        <div class="gallery">
+            <h1>Top Searches</h1>
+
+            <div class="grid_section">
+
+                <ul class="grid">
+
+                    <li>
+                        <div class="box img">
+                            <a href="profile.html">
+                               <img src="images/electrician.jpg" alt="">
+                                <h3>Electrician</h3>  
+
+                            </a>
+
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="box img">
+                            <a href="#">
+                               <img src="images/painter.jpg" alt="">
+                                <h3>Painter</h3>  
+
+                            </a>
+
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="box img">
+                            <a href="#">
+                               <img src="images/plumber_authority_1-min.jpg" alt="">
+                                <h3>Plumber</h3>  
+
+                            </a>
+
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="box img">
+                            <a href="#">
+                               <img src="images/mason-500x500.png" alt="">
+                                <h3>Mason</h3>  
+
+                            </a>
+
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="box img">
+                            <a href="#">
+                               <img src="images/1_0x0_790x520_0x520_become_a_better_driver.jpg" alt="">
+                                <h3>Driver</h3>  
+
+                            </a>
+
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="box img">
+                            <a href="#">
+                               <img src="images/carpenter-500.jpg" alt="">
+                                <h3>Carpenter</h3>  
+
+                            </a>
+
+                        </div>
+                    </li>
+
+
+
+                </ul>
+
+
+
+            </div>
+
+
+
+
+
+        </div>
+
+    </section>
+
+    <section class="contact" id="contactus">
+
+        <h4>CONTACT US</h4>
+        <h5>WE ARE ALWAYS READY TO SERVE YOU!</h5>
+
+        <form id="contact-form" method="post" action="">
+            <input name="name" class="form-control" type="text" placeholder="Your name" required><br>
+
+            <input name="email" class="form-control" type="email" placeholder="Your Email" required><br>
+            <textarea name="message" class="form-control" placeholder="Message" rows="4" required></textarea><br>
+
+            <input type="submit" class="form-control submit" value="SEND MESSAGE">
+
+        </form>
+
+
+
+    </section>
+
+
+    <footer>
+        <p>Copright &copy; Homework 2018 | All rights reserved</p>
+    </footer>
+
+</body>
+
+</html>
